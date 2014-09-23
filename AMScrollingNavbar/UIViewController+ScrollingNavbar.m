@@ -382,9 +382,9 @@
         frame.origin.y = frameNav.origin.y - [self statusBar];
     }
     if (IOS7_OR_LATER) {
-        frame.size.height = [UIScreen mainScreen].bounds.size.height - frame.origin.y;
+        frame.size.height = [UIScreen mainScreen].bounds.size.height - frame.origin.y - 49;
     } else {
-        frame.size.height = [UIScreen mainScreen].bounds.size.height - [self statusBar];
+        frame.size.height = [UIScreen mainScreen].bounds.size.height - [self statusBar] - 49;
     }
     self.scrollableView.superview.frame = frame;
     self.scrollableView.frame = self.scrollableView.superview.bounds;
